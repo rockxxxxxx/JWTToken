@@ -1,0 +1,10 @@
+import React from "react";
+import jwt from "jwt-decode";
+
+export default function Jwt() {
+  const user = jwt(
+    "eyJhbGciOiJSUzI1NiJ9.eyJ1c2VyTmFtZSI6InB0ZyIsImVtYWlsSWQiOiJlbGF2YXJhc2FuLnNlbnRoaWxAcGVvcGxldGVjaC5jb20iLCJzdWIiOiJpbnNjYXBlIiwianRpIjoiZDM2Y2EwZGMtZDA2Ni00MzUxLTliMGUtYTI5ZWUyZDJmOWRkIiwiaWF0IjoxNjcwNDkxNjA0LCJleHAiOjE2NzA1NzgwMDR9.umaWKTPx4VcNQSIw3PUfrDJ7DzQrrxZWToA-WDcegmTt-BmL0UvzldFGg9uKL6XYq6w3RMhS2ledK9gpkPlcc8dAypX1TllJPUYEhaTUIpiX6lTQSmbkNuE7i48AEz6u9bb3cTTveUYdxvoBO5ygnWyG9PJ8gpb51KtWj31nT7sYnp5yKxcNJ3nGWQduUR-xrTFfmaHvFvhaGlnVgW8a_oltmi0Ksdt49QlSXRR1cctYE2Ki4iEb-fGfPyIypHuBPWUExI0gptz4E5LuScWBdbD0myt_VCy5jGHjPortFBj61oNLe2RWJhTBev27vjg70VJXTchbZ1R6rvcGpPxM2g"
+  );
+  console.log(user.emailId);
+  return <div>{user.email}</div>;
+}
